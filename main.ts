@@ -7,7 +7,7 @@ app
     "/:any",
     (c) =>
       c.html(
-        `<p style="font-family: 'Lucida Console', monospace;">go back to / please</p>`,
+        `<p style="font-family: 'Lucida Console', monospace;">go back to <a href="/">/</a> please</p>`,
       ),
   );
 Deno.serve(app.fetch);
