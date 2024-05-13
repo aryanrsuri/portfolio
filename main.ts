@@ -2,12 +2,14 @@ import { Hono } from "https://deno.land/x/hono@v3.12.3/mod.ts";
 const index = await Deno.readFile("index.html");
 const math = await Deno.readFile("math.html");
 const dangers = await Deno.readFile("./articles/dangers.html")
+const bolognese = await Deno.readFile("./articles/bolognese.xhtml")
 const app = new Hono();
 app
   .get("/", (c) => c.text(index))
   .get("/index.html", (c) => c.text(index))
   .get("/math.html", (c) => c.text(math))
   .get("/dangers.html", (c) => c.text(dangers))
+  .get("/recipes/bolognese.html", (c) => c.text(bolognese))
   .get(
     "/:any",
     (c) =>
