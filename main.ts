@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 import { Hono, HonoRequest } from "https://deno.land/x/hono@v4.3.11/mod.ts";
 import { serveStatic } from "https://deno.land/x/hono@v4.3.11/middleware.ts";
-=======
-import { Hono } from "Hono";
-import { serveStatic } from "hono";
 // import * as hono from "https://deno.land/x/hono@v4.3.11/adapter/deno/serve-static.ts";
 // const index = await Deno.readFile("index.html");
 // const math = await Deno.readFile("math.html");
 // const dangers = await Deno.readFile("./articles/dangers.html")
 // const bolognese = await Deno.readFile("./articles/bolognese.xhtml")
 // const dalies13052024= await Deno.readFile("./articles/dailies13052024.xhtml")
->>>>>>> 5d5bed1 (Added math)
 const app = new Hono();
 app
   .use("/*", serveStatic({ root: "./src" }))
